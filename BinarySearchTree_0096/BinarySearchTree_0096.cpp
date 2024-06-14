@@ -55,4 +55,18 @@ public:
 			parent->rigthchild = newNode;
 		}
 	}
+
+	void search(string element, Node*& parent, Node*& currentNode)
+	{
+		currentNode = ROOT;
+		parent = NULL;
+		while ((currentNode != NULL && currentNode->info != element))
+		{
+			parent = currentNode;
+			if (element < currentNode->info)
+				currentNode = currentNode->lefchild;
+			else
+				currentNode = currentNode->rightchild;
+		}
+	}
 };

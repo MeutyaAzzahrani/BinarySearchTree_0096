@@ -35,7 +35,7 @@ public:
 		newNode->lefchild = NULL;
 		newNode->rightchild = NULL;
 
-		Node* perent = NULL;
+		Node* parent = NULL;
 		Node* currentNode = NULL;
 		search(element, parent, currentNode);
 
@@ -47,12 +47,12 @@ public:
 
 		if (element < parent->info)
 		{
-			parent->leftchild = newNode;
+			parent->lefchild = newNode;
 		}
 		
 		else if (element > parent->info)
 		{
-			parent->rigthchild = newNode;
+			parent->rightchild = newNode;
 		}
 	}
 
@@ -135,7 +135,7 @@ int main()
 
 		switch (ch)
 		{
-		case '1' :
+		case '1':
 		{
 			cout << "Enter a word: ";
 			string word;
@@ -143,7 +143,7 @@ int main()
 			obj.insert(word);
 			break;
 		}
-		case '2' :
+		case '2':
 		{
 			obj.inorder(obj.ROOT);
 			break;
@@ -155,8 +155,17 @@ int main()
 		}
 		case '4':
 		{
-			obj.postorder(obj.ROOT); 
+			obj.postorder(obj.ROOT);
 			break;
 		}
+		case '5':
+			return 0;
+		default:
+		{
+			cout << "Invalid option" << endl;
+			break;
+		}
+		}
+
 	}
 }

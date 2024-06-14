@@ -27,4 +27,16 @@ public:
 	{
 		ROOT = NULL; //Initializing ROOT to NULL
 	}
+
+	void insert(string element)
+	{
+		Node* newNode = new Node(element, NULL, NULL);
+		newNode->info = element;
+		newNode->lefchild = NULL;
+		newNode->rightchild = NULL;
+
+		Node* perent = NULL;
+		Node* currentNode = NULL;
+		search(element, parent, currentNode);
+	}
 };
